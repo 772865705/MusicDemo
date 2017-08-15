@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         tv = (TextView) findViewById(R.id.tv);
 
+        Handler handler = new Handler();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         timer = new Timer("appendtext");
         task = new TimerTask() {
             @Override
@@ -41,21 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         };
-
-        Handler handler = new Handler();
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
         timer.schedule(task,0,2000);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        task.cancel();
         timer.cancel();
     }
 }
