@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         tv = (TextView) findViewById(R.id.tv);
 
-        Handler handler = new Handler();
-
     }
 
     @Override
