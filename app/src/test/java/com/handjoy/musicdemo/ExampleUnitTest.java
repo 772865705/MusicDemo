@@ -14,4 +14,12 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void reverse(){
+        String s = "ajbfajklbfajklbjklbnsdfjaklbfajkbfjvh aweih vahviahweihbfawbfjlabfj jildf bjladbf ljkadbfjil b";
+        StringBuilder stringBuilder = new StringBuilder(s);
+        stringBuilder.reverse();
+        System.out.println(stringBuilder);
+    }
 }
